@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+//import HomePage from './pages/HomePage';
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";  
+import BVNpage from './pages/BVNpage';
+import NINpage from './pages/NINpage';
+import Passportpage from "./pages/Passportpage";
+import VINpage from "./pages/VINpage";
+import FRSCpage from "./pages/FRSCpage";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App(){
+        return (<Router>
+                <Switch>
+                <Route path="/" exact component={ NINpage } />
+                <Route path="/nin" component={NINpage} />
+                <Route path="/bvn" component={BVNpage} />
+                <Route path="/passport" component={Passportpage} />
+                <Route path="/vin" component={VINpage} />
+                <Route path="/frsc" component={FRSCpage} />
+                <Route path="" component={Error} />
+                </Switch>
+                </Router>);
 }
 
 export default App;
