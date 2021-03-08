@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import {Jumbotron, Nav} from 'react-bootstrap';
 import { LinkContainer} from "react-router-bootstrap"; 
